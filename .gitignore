@@ -1,3 +1,4 @@
 ~.vimbuffer
 .DS_Store
 *.swp
+node_modules/
