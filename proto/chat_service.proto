@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package proto;
+
+message WebMessage {
+    string text = 1;
+}
+
+service Chat {
+  rpc connect(stream WebMessage) returns (stream WebMessage) {}
+}
