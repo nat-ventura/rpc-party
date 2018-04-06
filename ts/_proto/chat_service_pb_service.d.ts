@@ -12,7 +12,17 @@ type Chatconnect = {
   readonly responseType: typeof chat_service_pb.WebMessage;
 };
 
+type ChatGetMessage = {
+  readonly methodName: string;
+  readonly service: typeof Chat;
+  readonly requestStream: false;
+  readonly responseStream: false;
+  readonly requestType: typeof chat_service_pb.GetMessageRequest;
+  readonly responseType: typeof chat_service_pb.WebMessage;
+};
+
 export class Chat {
   static readonly serviceName: string;
   static readonly connect: Chatconnect;
+  static readonly GetMessage: ChatGetMessage;
 }

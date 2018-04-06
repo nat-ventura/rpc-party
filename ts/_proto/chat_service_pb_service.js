@@ -18,5 +18,14 @@ Chat.connect = {
   responseType: chat_service_pb.WebMessage
 };
 
+Chat.GetMessage = {
+  methodName: "GetMessage",
+  service: Chat,
+  requestStream: false,
+  responseStream: false,
+  requestType: chat_service_pb.GetMessageRequest,
+  responseType: chat_service_pb.WebMessage
+};
+
 exports.Chat = Chat;
 

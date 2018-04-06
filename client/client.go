@@ -8,11 +8,12 @@ import (
 	"log"
 	"os"
 
+	"math/rand"
+	"strconv"
+
 	"github.com/nat-ventura/rpc-attack/proto"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
-	"math/rand"
-	"strconv"
 )
 
 const serverAddr = "localhost:10000"

@@ -6,6 +6,11 @@ message WebMessage {
     string text = 1;
 }
 
+message GetMessageRequest {
+  string text = 1;
+}
+
 service Chat {
   rpc connect(stream WebMessage) returns (stream WebMessage) {}
+  rpc GetMessage(GetMessageRequest) returns (WebMessage) {}
 }
